@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased text-slate-800 dark:text-slate-200;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100 dark:bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-600;
+  }
+
+  /* Selection styles */
+  ::selection {
+    @apply bg-teal-500/30 text-slate-900 dark:text-white;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-teal-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+  }
+}
+
+/* Page transitions */
+@layer components {
+  section {
+    @apply opacity-0 animate-fade;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+  }
+
+  /* Staggered section animations */
+  #about {
+    animation-delay: 0.3s;
+  }
+
+  #experience {
+    animation-delay: 0.4s;
+  }
+
+  #projects {
+    animation-delay: 0.5s;
+  }
+
+  #contact {
+    animation-delay: 0.6s;
+  }
+}
