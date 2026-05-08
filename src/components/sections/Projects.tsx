@@ -5,12 +5,15 @@ import { projects } from '../../data/projects';
 const Projects: React.FC = () => {
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
+  const [showAllOtherProjects, setShowAllOtherProjects] = React.useState(false);
+  const hasMoreOtherProjects = otherProjects.length > 3;
+  const visibleOtherProjects = showAllOtherProjects ? otherProjects : otherProjects.slice(0, 3);
 
   return (
     <section id="projects" className="py-24">
       <div className="flex items-center mb-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mr-4">
-          <span className="text-teal-500 dark:text-teal-400 font-mono text-xl mr-2">03.</span>
+        <h2 className="section-title mr-4">
+          <span className="type-eyebrow text-xl mr-2">03.</span>
           Some Things I've Built
         </h2>
         <div className="flex-grow h-px bg-slate-300 dark:bg-slate-700"></div>
@@ -51,18 +54,18 @@ const Projects: React.FC = () => {
                 } mt-4 md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 w-full`}
             >
               <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm p-6 rounded-lg shadow-xl">
-                <p className="text-teal-500 dark:text-teal-400 font-mono text-sm mb-2">
+                <p className="type-eyebrow mb-2 normal-case tracking-[0.08em]">
                   Featured Project
                 </p>
-                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">
+                <h3 className="type-title text-xl mb-4">
                   {project.title}
                 </h3>
 
-                <p className="text-slate-600 dark:text-slate-400 mb-4">
+                <p className="type-body text-base mb-4">
                   {project.description}
                 </p>
 
-                <ul className={`flex flex-wrap gap-3 text-xs text-slate-500 dark:text-slate-400 font-mono mb-6 ${index % 2 === 0 ? '' : 'md:justify-end'
+                <ul className={`flex flex-wrap gap-3 type-eyebrow normal-case tracking-[0.07em] text-slate-500 dark:text-slate-400 mb-6 ${index % 2 === 0 ? '' : 'md:justify-end'
                   }`}>
                   {project.tags.map(tag => (
                     <li key={tag}>{tag}</li>
@@ -99,15 +102,15 @@ const Projects: React.FC = () => {
       </div>
 
       {/* Other Projects Section */}
-      <h3 className="text-center text-2xl font-bold text-slate-800 dark:text-slate-100 mb-8">
+      <h3 className="type-title text-center text-2xl mb-8">
         Other Noteworthy Projects
       </h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {otherProjects.map(project => (
+        {visibleOtherProjects.map(project => (
           <div
             key={project.title}
-            className="bg-white dark:bg-slate-800 rounded-md shadow-md hover:cursor-pointer hover:-translate-y-2 transition-all duration-300"
+            className="border border-slate-300/40 bg-white/10 backdrop-blur-sm dark:border-slate-700/50 rounded-md shadow-md hover:cursor-pointer hover:-translate-y-2 transition-all duration-300"
           >
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
@@ -140,15 +143,15 @@ const Projects: React.FC = () => {
                 </div>
               </div>
 
-              <h4 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">
+              <h4 className="type-title text-xl mb-2">
                 {project.title}
               </h4>
 
-              <p className="text-slate-600 dark:text-slate-400 mb-6">
+              <p className="type-body text-base mb-6">
                 {project.description}
               </p>
 
-              <ul className="flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400 font-mono">
+              <ul className="flex flex-wrap gap-2 type-eyebrow normal-case tracking-[0.07em] text-slate-500 dark:text-slate-400">
                 {project.tags.map(tag => (
                   <li key={tag}>{tag}</li>
                 ))}
@@ -157,6 +160,18 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {hasMoreOtherProjects && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAllOtherProjects(prev => !prev)}
+            className="btn-premium"
+          >
+            {showAllOtherProjects ? 'Show Less' : 'Show More'}
+          </button>
+        </div>
+      )}
     </section>
   );
 };

@@ -40,7 +40,7 @@ export default {
       },
 
       fontFamily: {
-        sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Manrope', 'system-ui', 'sans-serif'],
         mono: ['SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'monospace'],
 
       },

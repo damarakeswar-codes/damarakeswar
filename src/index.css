@@ -3,12 +3,44 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', 'Manrope', system-ui, sans-serif;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans antialiased text-slate-800 dark:text-slate-200;
+    @apply font-sans antialiased text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'ss01' 1, 'cv01' 1, 'cv11' 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-[-0.02em] text-slate-900 dark:text-slate-100;
+    font-family: var(--font-display);
+  }
+
+  p {
+    @apply text-slate-600 dark:text-slate-400 leading-relaxed;
+  }
+
+  button,
+  input,
+  textarea,
+  select,
+  label {
+    @apply font-sans;
   }
 
   /* Custom scrollbar */
@@ -41,6 +73,40 @@
 
 /* Page transitions */
 @layer components {
+  .type-eyebrow {
+    @apply font-mono text-[0.72rem] sm:text-xs uppercase tracking-[0.16em] text-teal-500 dark:text-teal-400;
+  }
+
+  .type-display {
+    @apply font-bold tracking-[-0.03em] leading-[1.02] text-slate-900 dark:text-slate-100;
+    font-family: var(--font-display);
+  }
+
+  .type-title {
+    @apply font-bold tracking-[-0.02em] leading-tight text-slate-900 dark:text-slate-100;
+    font-family: var(--font-display);
+  }
+
+  .type-body {
+    @apply font-sans text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-400;
+  }
+
+  .type-ui {
+    @apply font-sans text-sm font-medium tracking-[0.01em];
+  }
+
+  .section-title {
+    @apply type-title text-2xl sm:text-3xl;
+  }
+
+  .interactive-link {
+    @apply transition-all duration-300 hover:text-teal-500 dark:hover:text-teal-400;
+  }
+
+  .btn-premium {
+    @apply inline-flex items-center rounded-md border border-teal-500 px-5 py-2.5 font-sans text-sm font-semibold tracking-[0.02em] text-teal-500 dark:text-teal-400 transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-500/10 dark:hover:bg-teal-400/10;
+  }
+
   section {
     @apply opacity-0 animate-fade;
     animation-fill-mode: forwards;

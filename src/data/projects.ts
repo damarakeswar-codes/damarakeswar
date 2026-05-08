@@ -1,3 +1,6 @@
+import VortexlyImage from '../data/vortexly.png';
+import BooktheshowImage from '../data/booktheshow.png'
+
 export type Project = {
   title: string;
   description: string;
@@ -12,34 +15,31 @@ export const projects: Project[] = [
   {
     title: "Vortexly - Weather Dashboard",
     description:
-      "A responsive Weather Dashboard built with React.js, Vite, and TailwindCSS for a sleek and modern UI. It fetches real-time weather data from the OpenWeather API, including temperature, conditions, and forecasts. Designed with a mobile-first approach, it delivers fast performance and an intuitive user experience.",
-    tags: ["React", "Tailwind CSS", "Openweather API", "Styled Components"],
-    image:
-      "https://images.pexels.com/photos/4200745/pexels-photo-4200745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    link: "https://vortexly.netlify.app/",
-    github: "https://github.com/amar-1999/weatherdashboard",
+      "A responsive Weather Dashboard built with React.js, Vite, and TailwindCSS for a sleek and modern UI. It fetches real-time weather data from the Weather API, including temperature, conditions, and forecasts. Designed with a mobile-first approach, it delivers fast performance and an intuitive user experience.",
+    tags: ["React", "Tailwind CSS", "Weather API", "Styled Components"],
+    image: VortexlyImage,
+    link: "https://vortexly-v1.netlify.app/",
+    github: "https://github.com/damarakeswar-codes/vortexly",
     featured: true,
   },
   {
-    title: "Halcyon Theme",
-    description:
-      "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-    tags: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-    image:
-      "https://images.pexels.com/photos/8097011/pexels-photo-8097011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    link: "https://halcyon-theme.netlify.com/",
-    github: "https://github.com/bchiang7/halcyon-site",
+    title: "Book The Show",
+    description: "A high-performance event booking application with real-time seat availability, secure email authentication, and integrated Razorpay payments. Designed with a mobile-first approach using Tailwind CSS.",
+    tags: ["React", "Tailwind CSS", "Firebase Console", "Razorpay"],
+    image: BooktheshowImage,
+    link: "https://booktheshow-bts.netlify.app/",
+    github: "https://github.com/damarakeswar-codes/book-the-show",
     featured: true,
   },
   {
-    title: "Damarakeswar Guddanti v4",
+    title:
+      "The Ultimate Guide to useEffect Dependencies (Without Losing Your Mind)",
     description:
-      "The fourth iteration of my personal website built with Gatsby and hosted on Netlify. The design inspiration came from my love for minimalism, clean lines, subtle animations, and efficient page performance.",
-    tags: ["Gatsby", "React", "GraphQL", "Netlify"],
-    image:
-      "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    link: "https://v4.brittanychiang.com/",
-    github: "https://github.com/bchiang7/v4",
+      "Dive deep into useEffect dependencies — how to manage them without pulling your hair out.",
+    tags: ["React", "Node.js", "Express"],
+    image:"https://miro.medium.com/1*ys1l9Q6WVW5hkGOtIYc7SQ.png",
+    link: "https://medium.com/@damarakeswar/the-ultimate-guide-to-useeffect-dependencies-without-losing-your-mind-fb52fd8162f6",
+    github: "",
     featured: true,
   },
   {
@@ -52,6 +52,21 @@ export const projects: Project[] = [
     link: "https://medium.com/@damarakeswar/environment-variables-in-react-and-node-js-the-complete-guide-e2f475be35cc",
     github: "",
     featured: false,
+  },
+  {
+    "title": "Civic Pulse",
+    "description": "A dynamic, high-performance news platform delivering real-time civic updates and community stories. Featuring a mobile-first design and elegant motion transitions, it provides a seamless, interactive reading experience for the socially conscious citizen.",
+    "tags": [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React",
+      "Responsive Design"
+    ],
+    "image": "https://images.pexels.com/photos/8097011/pexels-photo-8097011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "https://civic-pulse-v1.netlify.app/",
+    "github": "https://github.com/damarakeswar-codes/civic-pulse",
+    "featured": false
   },
   {
     title:
@@ -78,14 +93,62 @@ export const projects: Project[] = [
   },
   {
     title:
-      "The Ultimate Guide to useEffect Dependencies (Without Losing Your Mind)",
+      "Why Conditional Probability Is the Secret to Smarter Decisions in Life",
     description:
-      "Dive deep into useEffect dependencies — how to manage them without pulling your hair out.",
-    tags: ["React", "Node.js", "Express"],
+      "Conditional probability is the key to making better decisions in life. Learn how to use it to your advantage.",
+    tags: ["Probability", "Mathematics"],
     image:
       "https://images.pexels.com/photos/8090147/pexels-photo-8090147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    link: "https://medium.com/@damarakeswar/the-ultimate-guide-to-useeffect-dependencies-without-losing-your-mind-fb52fd8162f6",
+    link: "https://damarakeswar.medium.com/why-conditional-probability-is-the-secret-to-smarter-decisions-in-life-9126730281ca",
     github: "",
+    featured: false,
+  },
+  {
+    "title": "What is Web Server - Working & Architecture",
+    "description": "Explore the fundamental concepts of web servers, covering both hardware and software components. This guide explains how they process HTTP requests, manage data delivery, and the architecture powering modern websites.",
+    "tags": ["Web Server", "HTTP Protocol", "Server Architecture", "Backend Development"],
+    "image": "https://images.pexels.com/photos/8090147/pexels-photo-8090147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "link": "https://www.geeksforgeeks.org/websites-apps/what-is-a-web-server-working-and-architecture/",
+    "github": "",
+    "featured": false
+  },
+  {
+    title: "JavaScript Program to put an Image file in a JSON Object",
+    description: "Learn how to convert image files into Base64 strings using the FileReader API to efficiently store, transport, and embed image data directly within JSON objects for web applications.",
+    tags: ["JavaScript", "Base64", "JSON", "FileReader"],
+    image: "https://images.pexels.com/photos/8090147/pexels-photo-8090147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "https://www.geeksforgeeks.org/javascript/javascript-program-to-put-an-image-file-in-a-json-object/",
+    github: "",
+    featured: false,
+  },
+  {
+    title: "Notium",
+    description: "A streamlined, collaborative note-taking application designed for seamless organization. Features a minimalist interface with real-time syncing to help users capture thoughts, manage tasks, and boost daily productivity efficiently.",
+    tags: ["Productivity", "React", "Note-taking", "Open-source"],
+    image:
+      "https://images.pexels.com/photos/8097011/pexels-photo-8097011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "https://notium-v1.netlify.app/",
+    github: "https://github.com/damarakeswar-codes/notium",
+    featured: false,
+  },
+  {
+    title: "Exchangely",
+    description: "A sleek, real-time currency converter providing instant exchange rate calculations. Built with a focus on accuracy and responsive design to ensure seamless financial tracking across all modern devices.",
+    tags: ["React", "Tailwind CSS", "ExchangeRate-API"],
+    image:
+      "https://images.pexels.com/photos/8097011/pexels-photo-8097011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "https://exchangely-web.netlify.app/",
+    github: "https://github.com/damarakeswar-codes/exchangely",
+    featured: false,
+  },
+  {
+    title: "Oven Diaries",
+    description: "A digital storefront for a premium bakery, showcasing artisanal cakes, fresh pastries, and handcrafted treats for every celebration.",
+    tags: ["Bakery", "Cake Shop", "Static Site", "Food Industry"],
+    image:
+      "https://images.pexels.com/photos/8097011/pexels-photo-8097011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    link: "https://ovendiaries.netlify.app/",
+    github: "https://github.com/Oven-Diaries/oven-diaries",
     featured: false,
   },
 ];

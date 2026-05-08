@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ExternalLink, Menu, X } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
+import LogoImage from '../../data/logo.png';
 
 const NAV_ITEMS = [
   { name: 'About', href: '#about' },
@@ -39,20 +40,20 @@ const Header: React.FC = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a
           href="#"
-          className="text-2xl font-bold text-slate-800 dark:text-slate-100 transition-colors hover:text-teal-500 dark:hover:text-teal-400"
+          className="type-title text-2xl interactive-link"
           aria-label="Logo"
         >
-          DG
+          <img alt='Logo' src={LogoImage} className='w-16 object-contain' />
         </a>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center space-x-8  font-mono">
+        <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex items-center space-x-5">
             {NAV_ITEMS.map((item, index) => (
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="text-xs text-slate-600 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+                  className="type-eyebrow interactive-link"
                 >
                   <span className="text-teal-500 dark:text-teal-400 mr-1">{`0${index + 1}.`}</span>
                   {item.name}
@@ -65,7 +66,7 @@ const Header: React.FC = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-4 py-2 border border-teal-500 rounded font-medium text-teal-500 hover:bg-teal-500/10 transition-colors text-xs"
+            className="btn-premium"
           >
             Resume <ExternalLink className="ml-1 h-3 w-3" />
           </a>
@@ -74,7 +75,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile menu button */}
-        <div className="flex items-center md:hidden space-x-4  font-mono">
+        <div className="flex items-center md:hidden space-x-4">
           <ThemeToggle />
           <button
             onClick={toggleMobileMenu}
@@ -89,7 +90,7 @@ const Header: React.FC = () => {
       {/* Mobile menu */}
       <div
         className={`fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex justify-end z-50 transition-transform duration-300 ${mobileMenuOpen ? 'transform translate-x-0' : 'transform translate-x-full'
-          } md:hidden  font-mono`}
+          } md:hidden`}
       >
         <div className="w-3/4 bg-white dark:bg-slate-800 h-full p-8 flex flex-col">
           <div className="flex justify-end">
@@ -106,7 +107,7 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-lg font-medium text-slate-800 dark:text-slate-200"
+                className="type-ui text-lg text-slate-800 dark:text-slate-200 interactive-link"
                 onClick={toggleMobileMenu}
               >
                 <span className="text-teal-500 dark:text-teal-400 mr-2">{`0${index + 1}.`}</span>
@@ -117,7 +118,7 @@ const Header: React.FC = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs mt-8 flex items-center justify-center px-4 py-2 border border-teal-500 rounded text-teal-500 hover:bg-teal-500/10 transition-colors"
+              className="btn-premium text-xs mt-8 justify-center"
             >
               Resume <ExternalLink className="ml-1 h-4 w-4" />
             </a>

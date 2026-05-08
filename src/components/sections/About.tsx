@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileImage from '../../data/profile.jpg';
 
 const SKILLS = [
   'JavaScript',
@@ -13,32 +14,38 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-24">
       <div className="flex items-center mb-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mr-4">
-          <span className="text-teal-500 dark:text-teal-400 font-mono text-xl mr-2">01.</span>
+        <h2 className="section-title mr-4">
+          <span className="type-eyebrow text-xl mr-2">01.</span>
           About Me
         </h2>
         <div className="flex-grow h-px bg-slate-300 dark:bg-slate-700"></div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-10">
-        <div className="md:col-span-2 space-y-4 text-slate-600 dark:text-slate-400">
+      <div className="grid md:grid-cols-3 gap-4">
+        <div className="md:col-span-2 space-y-4 type-body">
           <p>
-            I’m a passionate frontend developer who thrives on building seamless, responsive, and user-first web applications. From architecting dynamic layouts using React, Ant Design, and TailwindCSS, to crafting pixel-perfect dashboards and custom component libraries, I believe in delivering clarity through code and impact through design. <br />
-            💡 Whether it’s a Dashboard, a finance-focused screen, or a chatbot-enhanced help module, I focus on creating intuitive, accessible, and high-performing interfaces across web and mobile. I bring frontend experiences to life not just to meet requirements, but to elevate them.
+            I am a <strong>Frontend Engineer</strong> dedicated to building high-performance, user-centric web applications. By blending technical architecture with a keen eye for design, I specialize in transforming complex requirements into seamless digital experiences—from scalable dashboards to custom component libraries built with <strong>React, Ant Design, MUI, Shadcn, and TailwindCSS</strong>.
           </p>
+
           <p>
-          🔧 My toolkit includes:
-          <br />
-          React JS • TailwindCSS • Ant Design • Redux • Axios • Framer Motion • Vite • Responsive Design • GitHub CI/CD
+            My approach centers on creating <strong>intuitive, accessible, and high-impact interfaces</strong>. Whether engineering finance-focused platforms or integrating AI-driven modules, I focus on delivering code that is as clean as the UI it powers. I don’t just build to meet specifications; I build to elevate the end-user experience.
           </p>
+
           <p>
-          ✨ I care deeply about design systems, code reusability, and creating experiences that users don’t just use but enjoy.
+            <strong>Core Toolkit:</strong>
+            <br />
+            React.js • TailwindCSS • Ant Design • Redux • Axios • Zustand • mui • TypeScript • Framer Motion • Vite • GitHub 
           </p>
+
+          <p>
+            I am deeply committed to <strong>design systems</strong>, <strong>modular code architecture</strong>, and the belief that great software should be as enjoyable to use as it is robust.
+          </p>
+
           <p>
             Skills:
           </p>
 
-          <ul className="grid grid-cols-2 gap-2 mt-4">
+          <ul className="grid grid-cols-2 gap-2 mt-4 text-sm tracking-[0.01em]">
             {SKILLS.map((skill) => (
               <li key={skill} className="flex items-start">
                 <span className="text-teal-500 dark:text-teal-400 mr-2">▹</span>
@@ -48,14 +55,34 @@ const About: React.FC = () => {
           </ul>
         </div>
 
-        <div className="md:col-span-1 relative group">
-          <div className="relative rounded overflow-hidden">
-            <div className="absolute inset-0 bg-teal-500/20 dark:bg-teal-400/20 z-10 group-hover:bg-transparent transition duration-300"></div>
-            <div className="border-solid border-2 border-teal-500 dark:border-teal-400 absolute inset-0 translate-x-5 translate-y-5 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300 rounded"></div>
+        <div className="relative group cursor-pointer w-64 sm:w-72 md:w-[320px] h-[340px] sm:h-[380px] md:h-[420px] mx-auto md:mx-0">
+          {/* Offset Border */}
+          <div className="absolute inset-0 border-2 border-teal-400 rounded-xl translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 md:translate-x-5 md:translate-y-5 group-hover:translate-x-2 group-hover:translate-y-2 sm:group-hover:translate-x-3 sm:group-hover:translate-y-3 transition-all duration-500 ease-out"></div>
+          {/* Image Container */}
+          <div className="relative w-full h-full overflow-hidden rounded-xl">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-teal-400/30 mix-blend-multiply z-10 group-hover:bg-transparent transition-all duration-500"></div>
+
+            {/* Image */}
             <img
-              src="https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src={ProfileImage}
               alt="Profile"
-              className="rounded relative z-0 grayscale group-hover:grayscale-0 transition-all duration-300"
+              className="
+              relative z-0
+              w-full
+              h-full
+              object-cover
+              grayscale
+              contrast-110
+              brightness-90
+              group-hover:grayscale-0
+              group-hover:brightness-100
+              scale-100
+              group-hover:scale-105
+              transition-all
+              duration-700
+              ease-out
+              "
             />
           </div>
         </div>

@@ -9,65 +9,38 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    id: 'upstatement',
-    company: 'Upstatement',
-    title: 'Lead Engineer',
-    range: 'May 2018 - Present',
-    url: 'https://upstatement.com',
+    id: 'validus',
+    company: 'Validus',
+    title: 'Software Engineer',
+    range: 'Sept 2022 - Mar 2026',
+    url: 'https://validusfintech.com/',
     responsibilities: [
-      'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, and more',
-      'Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements',
-      'Collaborate with designers, project managers, and other engineers to transform creative concepts into fully functioning websites and applications',
-      'Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship'
+      'Developed and deployed AIF and Mutual Fund web applications from scratch using React.js, Ant Design (AntD), Material UI (mui), and Tailwind CSS, implementing investment portfolio management, user authentication, and responsive UI features to enhance user experience and engagement.',
+      'Diagnosed and resolved complex frontend issues through debugging, performance optimization, and close collaboration with backend developers and QA teams, ensuring high application stability and efficiency across environments.',
+      'Collaborated with cross-functional teams to seamlessly integrate Redux, Context API, and UI component libraries, driving scalable architecture, code reusability, and consistent design standards throughout the development lifecycle.'
     ]
   },
   {
-    id: 'apple',
-    company: 'Apple',
-    title: 'UI Engineer',
-    range: 'July 2017 - May 2018',
-    url: 'https://apple.com',
+    id: 'enlume',
+    company: 'Enlume',
+    title: 'Associate Software Engineer',
+    range: 'Aug 2021 - Nov 2021',
+    url: 'https://www.enlume.com/',
     responsibilities: [
-      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
-      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal APIs',
-      'Architected and implemented the user interface of Apple Music\'s embeddable web player widget, which lets users log in and listen to full songs in the browser',
-      'Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps'
+      'Designed and implemented application modules with RESTful API integration, executing CRUD operations to enhance user profile management and sign-up workflows, while maintaining alignment with established software architecture and design principles.',
+      'Developed dynamic web interfaces using event-driven programming, building custom reusable components to improve scalability, maintainability, and overall UI consistency across platforms.',
+      'Integrated third-party SMS APIs and applied Adapter Design Patterns to automate SMS template management for training schedules and user notifications, ensuring seamless and efficient communication between the app and external services.'
     ]
   },
   {
-    id: 'scout',
-    company: 'Scout Studio',
-    title: 'Studio Developer',
-    range: 'January 2017 - June 2017',
-    url: 'https://scout.camd.northeastern.edu/',
+    id: 'eruvaka',
+    company: 'Eruvaka',
+    title: 'Software Developer',
+    range: 'Feb 2021 - Aug 2021',
+    url: 'https://www.enlume.com/',
     responsibilities: [
-      'Collaborated with a small team of student designers to spearhead a new brand and design system for Scout\'s online presence',
-      'Worked closely with designers to implement a design system using WordPress, HTML, and SCSS',
-      'Developed and maintained the in-house content management system powering the student-led design studio\'s website'
+      'Developed RESTful APIs using Node.js and Express.js to enable seamless front-end and back-end integration, supporting efficient data retrieval, manipulation, and real-time updates for dynamic web applications.',
+      'Designed and implemented interactive dashboards, pie charts, and data tables using React.js, Ant Design, and Chart.js, enhancing data visualization, navigation, and user engagement through intuitive UI/UX design.'    
     ]
   },
-  {
-    id: 'starry',
-    company: 'Starry',
-    title: 'Software Engineer Co-op',
-    range: 'July 2016 - December 2016',
-    url: 'https://starry.com',
-    responsibilities: [
-      'Engineered and maintained major features of Starry\'s customer-facing web app using ES6, Handlebars, Backbone, Marionette, and CSS',
-      'Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with Starry Station',
-      'Interfaced with user experience designers and other developers to ensure thoughtful and coherent user experiences across Starry\'s iOS and Android mobile apps'
-    ]
-  },
-  {
-    id: 'mullen',
-    company: 'MullenLowe',
-    title: 'Creative Technologist Co-op',
-    range: 'July 2015 - December 2015',
-    url: 'https://us.mullenlowe.com',
-    responsibilities: [
-      'Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery',
-      'Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness',
-      'Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more'
-    ]
-  }
 ];
