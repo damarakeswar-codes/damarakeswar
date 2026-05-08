@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ExternalLink, Menu, X } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
 import LogoImage from '../../data/logo.png';
+import ResumePdf from '../../data/Resume_DamarakeswarGuddanti.pdf';
 
 const NAV_ITEMS = [
   { name: 'About', href: '#about' },
@@ -63,7 +64,7 @@ const Header: React.FC = () => {
           </ul>
 
           <a
-            href="/resume.pdf"
+            href={ResumePdf}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-premium"
@@ -115,7 +116,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href={ResumePdf}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-premium text-xs mt-8 justify-center"
