@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
+import { useTheme } from "../../context/ThemeContext";
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
+  const { theme } = useTheme();
 
   // This should be run only once per application lifetime
   useEffect(() => {
@@ -39,9 +41,9 @@ const ParticleBackground = () => {
             },
           },
           particles: {
-            color: { value: "#ffffff" },
+            color: { value: theme === 'light' ? "#000000" : "#ffffff" },
             links: {
-              color: "#ffffff",
+              color: theme === 'light' ? "#000000" : "#ffffff",
               distance: 150,
               enable: true,
               opacity: 0.5,
