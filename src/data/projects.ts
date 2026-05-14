@@ -1,5 +1,6 @@
 import VortexlyImage from '../data/vortexly.png';
-import BooktheshowImage from '../data/booktheshow.png'
+import BooktheshowImage from '../data/booktheshow.png';
+import PomodoroImage from '../data/pomodoro.png';
 
 export type Project = {
   title: string;
@@ -40,6 +41,16 @@ export const projects: Project[] = [
     image:"https://miro.medium.com/1*ys1l9Q6WVW5hkGOtIYc7SQ.png",
     link: "https://medium.com/@damarakeswar/the-ultimate-guide-to-useeffect-dependencies-without-losing-your-mind-fb52fd8162f6",
     github: "",
+    featured: true,
+  },
+  {
+    title: "PoMotive",
+    description:
+      "A high-performance productivity timer built with a focus on sleek UI and seamless user experience. It features customizable work/break intervals and persistent state management, utilizing Styled Components for dynamic theming and Tailwind CSS for rapid, responsive layout construction.",
+    tags: ["React", "Tailwind CSS", "Styled Components"],
+    image: PomodoroImage,
+    link: "https://pomotive.netlify.app/",
+    github: "https://github.com/damarakeswar-codes/pomodoro",
     featured: true,
   },
   {
